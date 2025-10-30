@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Guardian Pro - Education Made Simple</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="book-animation">
+                <div class="book">
+                    <div class="page page1"></div>
+                    <div class="page page2"></div>
+                    <div class="page page3"></div>
+                </div>
+            </div>
+            <h2>Welcome to Smart Guardian Pro</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>Smart Guardian Pro</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#basic-education" class="nav-link">Compulsary Studies</a></li>
+                <li><a href="#compulsory-studies" class="nav-link">Basic Education</a></li>
+                <li><a href="#ai-assistant" class="nav-link">AI Helper</a></li>
+                <li><a href="#progress" class="nav-link">Progress</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape1"></div>
+                <div class="shape shape2"></div>
+                <div class="shape shape3"></div>
+                <div class="shape shape4"></div>
+                <div class="shape shape5"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Smart Farming</span>
+                    <span class="title-line">Smart Learning</span>
+                </h1>
+                <p class="hero-subtitle">Empowering farmers with essential education and modern farming techniques. Learn business skills, improve crop yields, and maximize profits with our comprehensive courses.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('basic-education')">
+                        <i class="fas fa-play"></i>
+                        Start Learning
+                    </button>
+                    <button class="btn btn-secondary" onclick="openAIAssistant()">
+                        <i class="fas fa-robot"></i>
+                        Ask AI Helper
+                    </button>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <div class="learning-scene">
+                    <div class="student-avatar">
+                        <div class="avatar-head"></div>
+                        <div class="avatar-body"></div>
+                        <div class="glasses"></div>
+                    </div>
+                    <div class="floating-books">
+                        <div class="book book1">🌾</div>
+                        <div class="book book2">📚</div>
+                        <div class="book book3">💰</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Basic Education Section -->
+    <section id="basic-education" class="subjects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Compulsary Studies </h2>
+                <p class="section-subtitle">Essential farming knowledge and business skills for modern agriculture</p>
+            </div>
+            
+            <div class="subjects-grid">
+                <!-- Business Studies -->
+                <div class="subject-card" data-subject="business">
+                    <div class="card-header">
+                        <div class="subject-icon business-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Business Studies</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Learn smart farming techniques to maximize profits</p>
+                        <ul class="topic-list">
+                            <li>Cost-Effective Production</li>
+                            <li>Fertilizers & Soil Management</li>
+                            <li>Crop Storage & Marketing</li>
+                            <li>Seasonal Planning</li>
+                        </ul>
+                        <div class="progress-indicator">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                    </div>
+                    <button class="card-button" onclick="openSubject('business')">
+                        <span>Start Learning</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compulsory Studies Section -->
+    <section id="compulsory-studies" class="subjects-section compulsory-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Basic Education</h2>
+                <p class="section-subtitle">Intermediate level education (Class 6-8) in core subjects</p>
+            </div>
+            
+            <div class="subjects-grid">
+                <!-- Mathematics -->
+                <div class="subject-card" data-subject="math">
+                    <div class="card-header">
+                        <div class="subject-icon math-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Mathematics</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Intermediate mathematics for practical applications</p>
+                        <ul class="topic-list">
+                            <li>Fractions & Decimals</li>
+                            <li>Percentage & Profit-Loss</li>
+                            <li>Area & Perimeter</li>
+                            <li>Data Handling</li>
+                        </ul>
+                        <div class="progress-indicator">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                    </div>
+                    <button class="card-button" onclick="openSubject('math')">
+                        <span>Start Learning</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Science -->
+                <div class="subject-card" data-subject="science">
+                    <div class="card-header">
+                        <div class="subject-icon science-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Science</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Applied science for agriculture and daily life</p>
+                        <ul class="topic-list">
+                            <li>Plant Biology & Growth</li>
+                            <li>Soil Science & Nutrients</li>
+                            <li>Weather & Climate</li>
+                            <li>Food & Nutrition</li>
+                        </ul>
+                        <div class="progress-indicator">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                    </div>
+                    <button class="card-button" onclick="openSubject('science')">
+                        <span>Start Learning</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- English -->
+                <div class="subject-card" data-subject="english">
+                    <div class="card-header">
+                        <div class="subject-icon english-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>English</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Practical English for communication and business</p>
+                        <ul class="topic-list">
+                            <li>Grammar & Sentence Structure</li>
+                            <li>Business Communication</li>
+                            <li>Reading Comprehension</li>
+                            <li>Writing Skills</li>
+                        </ul>
+                        <div class="progress-indicator">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                    </div>
+                    <button class="card-button" onclick="openSubject('english')">
+                        <span>Start Learning</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Hindi -->
+                <div class="subject-card" data-subject="hindi">
+                    <div class="card-header">
+                        <div class="subject-icon hindi-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>हिंदी (Hindi)</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Intermediate Hindi for better communication</p>
+                        <ul class="topic-list">
+                            <li>व्याकरण (Grammar)</li>
+                            <li>गद्य और पद्य (Prose & Poetry)</li>
+                            <li>पत्र लेखन (Letter Writing)</li>
+                            <li>निबंध लेखन (Essay Writing)</li>
+                        </ul>
+                        <div class="progress-indicator">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0% Complete</span>
+                        </div>
+                    </div>
+                    <button class="card-button" onclick="openSubject('hindi')">
+                        <span>Start Learning</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Modal -->
+    <div id="learning-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Subject Learning</h3>
+                <button class="close-btn" onclick="closeLearningModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="lesson-container">
+                    <div class="lesson-sidebar">
+                        <h4>Lessons</h4>
+                        <ul id="lesson-list" class="lesson-list">
+                            <!-- Lessons will be populated by JavaScript -->
+                        </ul>
+                    </div>
+                    <div class="lesson-content">
+                        <div id="lesson-display" class="lesson-display">
+                            <!-- Lesson content will be displayed here -->
+                        </div>
+                        <div class="lesson-controls">
+                            <button class="btn btn-secondary" onclick="previousLesson()">
+                                <i class="fas fa-chevron-left"></i>
+                                Previous
+                            </button>
+                            <button class="btn btn-primary" onclick="nextLesson()">
+                                Next
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Assistant Section -->
+    <section id="ai-assistant" class="ai-section">
+        <div class="container">
+            <div class="ai-header">
+                <div class="ai-avatar">
+                    <div class="avatar-circle">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="pulse-ring"></div>
+                </div>
+                <h2>Meet Your AI Learning Assistant</h2>
+                <p>Ask me anything about farming, business, or your studies. I'm here to help you learn and grow!</p>
+            </div>
+            
+            <div class="ai-chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message ai-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Hello! I'm your AI learning assistant. Feel free to ask me questions about farming techniques, business strategies, Mathematics, Science, English, or Hindi. I'm here to help you succeed!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <div class="input-group">
+                        <input type="text" id="user-input" placeholder="Ask me about farming, business, or studies..." maxlength="500">
+                        <button id="send-btn" onclick="sendMessage()">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="quick-questions">
+                        <span>Quick questions:</span>
+                        <button class="quick-btn" onclick="askQuickQuestion('How to reduce farming costs?')">How to reduce farming costs?</button>
+                        <button class="quick-btn" onclick="askQuickQuestion('Best fertilizer for wheat?')">Best fertilizer for wheat?</button>
+                        <button class="quick-btn" onclick="askQuickQuestion('When to harvest rice?')">When to harvest rice?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Section -->
+    <section id="progress" class="progress-section">
+        <div class="container">
+            <h2 class="section-title">Your Learning Journey</h2>
+            <div class="progress-dashboard">
+                <div class="progress-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="total-lessons">0</h3>
+                            <p>Lessons Completed</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="study-time">0</h3>
+                            <p>Minutes Studied</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="achievements">0</h3>
+                            <p>Achievements</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="subject-progress">
+                    <h3>Subject Progress</h3>
+                    <div class="progress-bars">
+                        <div class="subject-progress-item">
+                            <div class="subject-info">
+                                <span class="subject-name">Business Studies</span>
+                                <span class="progress-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill business-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="subject-progress-item">
+                            <div class="subject-info">
+                                <span class="subject-name">Mathematics</span>
+                                <span class="progress-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill math-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="subject-progress-item">
+                            <div class="subject-info">
+                                <span class="subject-name">Science</span>
+                                <span class="progress-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill science-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="subject-progress-item">
+                            <div class="subject-info">
+                                <span class="subject-name">English</span>
+                                <span class="progress-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill english-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="subject-progress-item">
+                            <div class="subject-info">
+                                <span class="subject-name">Hindi</span>
+                                <span class="progress-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill hindi-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Settings</h3>
+                <button class="close-btn" onclick="closeSettingsModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <h4>AI Assistant Settings</h4>
+                    <div class="setting-item">
+                        <label for="api-key">Gemini API Key:</label>
+                        <input type="password" id="api-key" placeholder="Enter your Gemini API key" value="AIzaSyCW07q0dZoD7CiEipdEMqDRrsAAOiTfXro">
+                        <small>Your API key is stored locally and never shared</small>
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h4>Display Settings</h4>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="large-text"> Large Text Mode
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="high-contrast"> High Contrast Mode
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section fade-in" tabindex="20" aria-label="Contact section">
+        <div class="section-header">
+            <span class="section-badge">Get In Touch</span>
+            <h2 class="slide-down">Contact <span class="highlight">Us</span></h2>
+            <p class="section-description">Have questions or suggestions? We'd love to hear from you!</p>
+        </div>
+        <form id="contactForm" method="POST" action="https://api.web3forms.com/submit">
+            <input type="hidden" name="access_key" value="6b94db20-9f33-4b19-b088-68d5f8e0a62c" />
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+            <div id="form-status"></div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Smart Guardian Pro</h4>
+                    <p>Empowering farmers through education and smart farming techniques</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#basic-education">Basic Education</a></li>
+                        <li><a href="#compulsory-studies">Compulsory Studies</a></li>
+                        <li><a href="#ai-assistant">AI Helper</a></li>
+                        <li><a href="#progress">Progress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p>Need help? Our AI assistant is always ready to help you learn and grow!</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Smart Guardian Pro. Made with ❤️ for smart farmers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
